@@ -111,17 +111,17 @@
     flex-direction: row;
     align-items: center;
   }
-  
+
   .banner-image {
     width: 300px;
     margin-bottom: 0;
     margin-right: 48px;
   }
-  
+
   .banner-name {
     font-size: 36px;
   }
-  
+
   .food-items-list {
     flex-direction: row;
     flex-wrap: wrap;
