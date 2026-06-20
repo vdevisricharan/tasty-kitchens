@@ -1,0 +1,130 @@
+.restaurant-details-bg {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.restaurant-banner {
+  background-color: #183b56;
+  padding: 32px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-content {
+  width: 90%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.banner-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.banner-name {
+  font-family: 'Roboto';
+  color: #ffffff;
+  font-size: 28px;
+  margin: 0 0 12px 0;
+}
+
+.banner-cuisine,
+.banner-location {
+  font-family: 'Roboto';
+  color: #e2e8f0;
+  font-size: 16px;
+  margin: 0 0 8px 0;
+}
+
+.banner-stats-container {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-rating {
+  display: flex;
+  align-items: center;
+}
+
+.banner-star {
+  color: #ffffff;
+  margin-right: 6px;
+}
+
+.stat-value {
+  font-family: 'Roboto';
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.stat-label {
+  font-family: 'Roboto';
+  color: #e2e8f0;
+  font-size: 12px;
+  margin: 6px 0 0 0;
+}
+
+.stat-divider {
+  color: #e2e8f0;
+  margin: 0 24px;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.food-items-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 48px auto;
+}
+
+.food-items-list {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 768px) {
+  .banner-content {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .banner-image {
+    width: 300px;
+    margin-bottom: 0;
+    margin-right: 48px;
+  }
+  
+  .banner-name {
+    font-size: 36px;
+  }
+  
+  .food-items-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
