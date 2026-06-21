@@ -63,11 +63,11 @@ class Login extends Component {
 
     return (
       <div className="login-container">
-        {/* Mobile Landing Image */}
+        {/* Landing Image */}
         <img
-          src="https://res.cloudinary.com/dpudcurwt/image/upload/v1781943625/Rectangle_1457_rtjtbo.png"
+          src="https://res.cloudinary.com/dpudcurwt/image/upload/v1781682410/ceff20e8367d1981f2a409a617ac848670d29c7e_res7us.jpg"
           alt="website login"
-          className="login-image mobile-image"
+          className="login-image"
         />
 
         {/* Form Container */}
@@ -117,13 +117,6 @@ class Login extends Component {
             </button>
           </form>
         </div>
-
-        {/* Desktop Landing Image */}
-        <img
-          src="https://res.cloudinary.com/dpudcurwt/image/upload/v1781682410/ceff20e8367d1981f2a409a617ac848670d29c7e_res7us.jpg"
-          alt="website login"
-          className="login-image desktop-image"
-        />
       </div>
     )
   }

@@ -22,7 +22,7 @@ class RestaurantCard extends Component {
               />
               <p className="rating-text">{userRating.rating}</p>
               <h1 className="total-reviews">
-                ({userRating.total_reviews} ratings)
+                {userRating.total_reviews} ratings
               </h1>
             </div>
           </div>

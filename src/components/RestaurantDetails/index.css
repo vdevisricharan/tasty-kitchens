@@ -5,6 +5,13 @@
   background-color: #ffffff;
 }
 
+.details-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
 .restaurant-banner {
   background-color: #183b56;
   padding: 32px 0;

@@ -9,6 +9,7 @@ class CartItem extends Component {
 
   onClickIncrement = () => {
     const {cartItemDetails, incrementQuantity} = this.props
+
     incrementQuantity(cartItemDetails.id)
   }
 

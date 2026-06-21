@@ -1,8 +1,7 @@
 import {Component} from 'react'
 import Cookies from 'js-cookie'
 import Slider from 'react-slick'
-import AppLoader from '../AppLoader'
-
+import Loader from 'react-loader-spinner'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import './index.css'
@@ -51,7 +50,14 @@ class OffersCarousel extends Component {
     }
 
     if (isLoading) {
-      return <AppLoader testid="restaurants-offers-loader" />
+      return (
+        <div
+          data-testid="restaurants-offers-loader"
+          className="carousel-loader-container"
+        >
+          <Loader type="TailSpin" color="#F7931E" height="50" width="50" />
+        </div>
+      )
     }
 
     return (

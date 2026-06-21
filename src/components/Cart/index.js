@@ -62,7 +62,7 @@ class Cart extends Component {
         alt="empty cart"
         className="empty-cart-image"
       />
-      <h1 className="empty-cart-heading">No Orders Yet!</h1>
+      <h1 className="empty-cart-heading">No Order Yet!</h1>
       <p className="empty-cart-text">
         Your cart is empty. Add something from the menu.
       </p>
@@ -122,7 +122,7 @@ class Cart extends Component {
         </ul>
 
         <div className="order-total-container">
-          <h1 className="order-total-label">Order Total :</h1>
+          <h1 className="order-total-label">Order Total:</h1>
           <div className="total-price-section">
             <p data-testid="total-price" className="order-total-value">
               ₹{totalAmount}.00

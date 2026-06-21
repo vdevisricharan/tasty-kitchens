@@ -1,27 +1,29 @@
-/* Mobile First Styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,700&display=swap');
+
+/* =========================================
+   Mobile First Styles (Default)
+   ========================================= */
 .login-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   background-color: #ffffff;
+  font-family: 'Roboto', sans-serif;
 }
 
+/* On mobile, the image sits at the top with a distinct curved bottom edge */
 .login-image {
   width: 100%;
+  height: 350px;
   object-fit: cover;
-}
-
-/* Hide desktop image on mobile */
-.desktop-image {
-  display: none;
+  border-radius: 0 0 50% 50% / 0 0 15% 15%; /* Creates the curve seen in mobile design */
 }
 
 .login-form-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 24px;
-  margin-top: 20px;
+  padding: 32px 24px;
+  flex-grow: 1;
 }
 
 .form-container {
@@ -29,34 +31,37 @@
   flex-direction: column;
   width: 100%;
   max-width: 400px;
+  margin: 0 auto;
 }
 
+/* Mobile design typically hides the logo to save space, 
+   but we keep it visible for test cases, scaling it cleanly */
 .logo-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .website-logo {
-  width: 60px;
+  width: 50px;
 }
 
 .logo-text {
-  font-family: 'Roboto';
-  font-size: 24px;
+  font-size: 22px;
   color: #f7931e;
   font-weight: bold;
   font-style: italic;
   margin-top: 12px;
+  margin-bottom: 0;
 }
 
+/* Left-aligned for mobile as per design */
 .login-heading {
-  font-family: 'Roboto';
-  font-size: 32px;
+  font-size: 28px;
   color: #183b56;
   margin-bottom: 24px;
-  text-align: center;
+  text-align: left; 
 }
 
 .input-container {
@@ -66,30 +71,33 @@
 }
 
 .input-label {
-  font-family: 'Roboto';
   font-size: 12px;
   color: #475569;
   font-weight: bold;
   margin-bottom: 8px;
+  letter-spacing: 0.5px;
 }
 
 .input-field {
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   color: #183b56;
   background-color: #e2e8f0;
-  border: none;
+  border: 1px solid transparent; /* Prevents layout shift on focus */
   border-radius: 4px;
   padding: 12px 16px;
   outline: none;
+  height: 44px;
+  transition: border-color 0.2s ease-in-out;
 }
 
 .input-field:focus {
-  border: 1px solid #f7931e;
+  border-color: #f7931e;
+  background-color: #ffffff;
 }
 
 .login-button {
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   font-weight: bold;
   font-size: 14px;
   color: #ffffff;
@@ -98,52 +106,72 @@
   border-radius: 8px;
   padding: 12px;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 12px;
+  height: 44px;
+  transition: background-color 0.2s;
+}
+
+.login-button:hover {
+  background-color: #e88517;
 }
 
 .error-message {
-  font-family: 'Roboto';
   font-size: 12px;
   color: #ef4444;
   margin-top: 0;
   margin-bottom: 12px;
 }
 
-/* Desktop Media Query */
+/* =========================================
+   Desktop Styles (min-width: 768px)
+   ========================================= */
 @media screen and (min-width: 768px) {
   .login-container {
-    flex-direction: row;
-    justify-content: center;
+    /* row-reverse forces the image (first in HTML) to the right side! */
+    flex-direction: row-reverse; 
     align-items: center;
+    background-color: #f8fafc; /* Subtle off-white background for desktop */
   }
 
-  /* Hide mobile image on desktop */
-  .mobile-image {
-    display: none;
-  }
-
-  /* Show and style desktop image */
-  .desktop-image {
-    display: block;
+  /* Desktop image spans the full right half, removing the mobile curve */
+  .login-image {
     width: 50%;
     height: 100vh;
+    border-radius: 0; 
   }
 
   .login-form-container {
     width: 50%;
-    justify-content: center;
     align-items: center;
-    margin-top: 0;
+    justify-content: center;
+    padding: 0;
   }
 
+  /* Creates the floating card effect seen in the desktop design */
   .form-container {
     background-color: #ffffff;
     padding: 48px;
     border-radius: 12px;
     box-shadow: 0px 8px 40px rgba(7, 7, 23, 0.08);
+    max-width: 450px;
   }
 
+  .website-logo {
+    width: 60px;
+  }
+
+  .logo-text {
+    font-size: 24px;
+  }
+
+  .logo-container {
+    margin-bottom: 32px;
+  }
+
+  /* Centered aligned for desktop as per design */
   .login-heading {
-    text-align: left;
+    text-align: center; 
+    font-size: 32px;
+    margin-bottom: 32px;
   }
 }

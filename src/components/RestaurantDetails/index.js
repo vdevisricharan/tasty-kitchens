@@ -1,10 +1,9 @@
 import {Component} from 'react'
 import Cookies from 'js-cookie'
 import {FaStar} from 'react-icons/fa'
-
+import Loader from 'react-loader-spinner'
 import Header from '../Header'
 import Footer from '../Footer'
-import AppLoader from '../AppLoader'
 import FoodItem from '../FoodItem'
 import './index.css'
 
@@ -115,7 +114,12 @@ class RestaurantDetails extends Component {
         <Header />
         <div className="restaurant-details-bg">
           {isLoading ? (
-            <AppLoader testid="restaurant-details-loader" />
+            <div
+              data-testid="restaurant-details-loader"
+              className="details-loader-container"
+            >
+              <Loader type="TailSpin" color="#F7931E" height="50" width="50" />
+            </div>
           ) : (
             <>
               {this.renderRestaurantBanner()}

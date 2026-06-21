@@ -1,5 +1,5 @@
 import {Component} from 'react'
-import {FaStar} from 'react-icons/fa'
+import {FaStar, FaRupeeSign} from 'react-icons/fa'
 import './index.css'
 
 class FoodItem extends Component {
@@ -72,7 +72,10 @@ class FoodItem extends Component {
         <img src={imageUrl} alt="food item" className="food-item-image" />
         <div className="food-item-details">
           <h1 className="food-item-name">{name}</h1>
-          <p className="food-item-cost">₹ {cost}</p>
+          <p className="food-item-cost">
+            <FaRupeeSign size={12} />
+            {cost}
+          </p>
           <div className="food-item-rating-container">
             <FaStar className="food-star-icon" />
             <p className="food-item-rating">{rating}</p>
