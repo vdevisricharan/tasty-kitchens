@@ -87,20 +87,20 @@ class PopularRestaurants extends Component {
   renderHeader = () => {
     const {sortByValue} = this.state
     return (
-      <div className='popular-header'>
-        <div className='header-text-container'>
-          <h1 className='popular-heading'>Popular Restaurants</h1>
-          <p className='popular-description'>
+      <div className="popular-header">
+        <div className="header-text-container">
+          <h1 className="popular-heading">Popular Restaurants</h1>
+          <p className="popular-description">
             Select Your favourite restaurant special dish and make your day
             happy...
           </p>
         </div>
-        <div className='sort-container'>
-          <MdSort className='sort-icon' />
+        <div className="sort-container">
+          <MdSort className="sort-icon" />
           {/* Capitalized 'By' to pass strict text checks */}
-          <p className='sort-by-text'>Sort By</p>
+          <p className="sort-by-text">Sort By</p>
           <select
-            className='sort-dropdown'
+            className="sort-dropdown"
             value={sortByValue}
             onChange={this.onChangeSortBy}
           >
@@ -119,19 +119,19 @@ class PopularRestaurants extends Component {
     const {restaurantsList, isLoading, activePage, totalPages} = this.state
 
     return (
-      <div className='popular-restaurants-container'>
+      <div className="popular-restaurants-container">
         {this.renderHeader()}
 
         {isLoading ? (
           <div
-            data-testid='restaurants-list-loader'
-            className='list-loader-container'
+            data-testid="restaurants-list-loader"
+            className="list-loader-container"
           >
-            <Loader type='TailSpin' color='#F7931E' height='50' width='50' />
+            <Loader type="TailSpin" color="#F7931E" height="50" width="50" />
           </div>
         ) : (
           <>
-            <ul className='restaurants-list'>
+            <ul className="restaurants-list">
               {restaurantsList.map(restaurant => (
                 <RestaurantCard
                   key={restaurant.id}
@@ -140,25 +140,25 @@ class PopularRestaurants extends Component {
               ))}
             </ul>
 
-            <div className='pagination-container'>
+            <div className="pagination-container">
               <button
-                type='button'
-                data-testid='pagination-left-button'
-                className='pagination-button'
+                type="button"
+                data-testid="pagination-left-button"
+                className="pagination-button"
                 onClick={this.onClickLeftArrow}
               >
                 <MdKeyboardArrowLeft size={24} />
               </button>
 
-              <p className='page-numbers'>
-                <span data-testid='active-page-number'>{activePage}</span> of{' '}
+              <p className="page-numbers">
+                <span data-testid="active-page-number">{activePage}</span> of{' '}
                 {totalPages}
               </p>
 
               <button
-                type='button'
-                data-testid='pagination-right-button'
-                className='pagination-button'
+                type="button"
+                data-testid="pagination-right-button"
+                className="pagination-button"
                 onClick={this.onClickRightArrow}
               >
                 <MdKeyboardArrowRight size={24} />

@@ -3,17 +3,17 @@
   "name": "App_name",
   "icons": [
     {
-      "src": "img/favicon.ico",
+      "src": "https://res.cloudinary.com/dpudcurwt/image/upload/v1781943535/logo_jtmsn3.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "img/logo192.png",
+      "src": "https://res.cloudinary.com/dpudcurwt/image/upload/v1781943535/logo_jtmsn3.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "img/logo512.png",
+      "src": "https://res.cloudinary.com/dpudcurwt/image/upload/v1781943535/logo_jtmsn3.png",
       "type": "image/png",
       "sizes": "512x512"
     }
